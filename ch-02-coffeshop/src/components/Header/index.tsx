@@ -4,7 +4,7 @@ import { HeaderContainer, HeaderButtonsContainer, HeaderButton } from './styles'
 import logoImg from '../../assets/logo.svg'
 
 export function Header() {
-  const cartAmount = 0
+  const cartAmount = 1
 
   return (
     <HeaderContainer>
@@ -12,7 +12,6 @@ export function Header() {
         <NavLink to="/">
           <img src={logoImg} alt="Logo" />
         </NavLink>
-
         <HeaderButtonsContainer>
           <HeaderButton variant="purple">
             <MapPin size={20} weight="fill" />
