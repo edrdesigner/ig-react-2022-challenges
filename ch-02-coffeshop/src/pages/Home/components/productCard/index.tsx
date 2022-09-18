@@ -11,6 +11,7 @@ import {
   ProductCardContainer,
   Tags,
 } from './styles'
+import { useCart } from '@/hooks/useCart'
 
 export interface Product {
   id: number
@@ -27,6 +28,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const [quantity, setQuantity] = useState(1)
+  const { addProductToCart } = useCart()
 
   function handleIncrease() {
     setQuantity((state) => state + 1)
@@ -42,7 +44,7 @@ export function ProductCard({ product }: ProductCardProps) {
       quantity,
     }
 
-    console.log('add cart: ', productToAdd)
+    addProductToCart(productToAdd)
   }
 
   const formattedPrice = formatMoney(product.price)
