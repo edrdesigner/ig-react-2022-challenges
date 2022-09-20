@@ -27,9 +27,11 @@ export const InputStyleContainer = styled.div<InputContainerProps>`
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+
   &:focus-within {
     border-color: ${({ theme }) => theme.colors['brand-yellow-dark']};
   }
+
   ${({ theme, hasError }) =>
     hasError &&
     css`

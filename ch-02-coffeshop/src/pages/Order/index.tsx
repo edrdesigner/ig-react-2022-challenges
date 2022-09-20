@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { useCart } from '@/hooks/useCart'
 import { OrderContainerForm } from './styles'
 import { SelectedProducts } from './components/SelectedProducts'
+import { CompleteOrderForm } from './components/CompleteOrderForm'
 
 enum PaymentMethods {
   credit = 'credit',
@@ -56,7 +57,7 @@ export function Order() {
         className="container"
         onSubmit={handleSubmit(handleConfirmOrder)}
       >
-        {/* <CompleteOrderForm /> */}
+        <CompleteOrderForm />
         <SelectedProducts />
       </OrderContainerForm>
     </FormProvider>
